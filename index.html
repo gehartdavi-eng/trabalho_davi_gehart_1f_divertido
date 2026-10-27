@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotline Miami | Jogo de fã</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <canvas id="c" width="960" height="600" aria-label="Área do jogo"></canvas>
+
+    <section id="menu" class="overlay">
+      <p class="tag">Miami, 1989</p>
+      <h1>Hotline<br>Miami</h1>
+      <p class="bemvindo">Seja bem-vindo!</p>
+      <p class="credito">Este jogo foi feito por <strong>Davi Gehart</strong> da <strong>1F</strong>.</p>
+      <ul class="controles">
+        <li><b>W A S D</b> ou setas: mover</li>
+        <li><b>Mouse</b>: mirar &nbsp; <b>Clique</b>: atirar</li>
+        <li><b>Espaço</b> ou botão direito: golpe corpo a corpo</li>
+        <li><b>Shift</b>: habilidade especial (máscara do Coelho) &nbsp; <b>R</b>: recomeçar</li>
+      </ul>
+      <p class="regra">Um tiro mata você. Um tiro mata eles. Limpe a sala e ache a saída.</p>
+      <button id="jogar" type="button">Jogar</button>
+      <p class="dica">ou aperte Enter</p>
+    </section>
+
+    <section id="mascaras" class="overlay oculto">
+      <h2>Escolha sua máscara</h2>
+      <div id="grade" class="grade"></div>
+      <p id="info" class="info"></p>
+      <button id="comecar" type="button">Começar</button>
+      <p class="dica">clique numa máscara · setas movem · Enter começa</p>
+    </section>
+
+    <section id="fim" class="overlay oculto">
+      <h2>Você morreu</h2>
+      <p id="resumo"></p>
+      <div class="linha">
+        <button id="again" type="button">Tentar de novo</button>
+        <button id="trocar" type="button" class="sec">Trocar máscara</button>
+      </div>
+      <p class="dica">ou aperte R</p>
+    </section>
+    <div class="scan" aria-hidden="true"></div>
+  </main>
+  <noscript>Ative o JavaScript para jogar.</noscript>
+  <script src="game.js"></script>
+</body>
+</html>
